@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <title>Timetitle</title>
-        <link href="https://fonts.googleapis.comm/css?family=Aldrich" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet"> 
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="assets/js/script.js"></script>
     </head>

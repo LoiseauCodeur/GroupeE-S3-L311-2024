@@ -6,8 +6,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     function init(){
        document.querySelector('.button').addEventListener('clic', (event) => 
             is_run = !is_run
-            ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? dcument.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class')+' pause');
-        })
+            ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? dcument.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class')+' pause')
+        );
 
         setTimeInterval(function(){
             if(is_run){
@@ -19,8 +19,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 document.querySelector('body').style.background = randomHexColor(document.querySelector('#hours').innerHTML, document.querySelector('#minutes').innerHTML, document.querySelector('#seconds').innerHTML);
                 
             }
-        }, 1000;
-    }
+        }, 1000);
+    };
 
     function adjustTimer(timer){
         (timer < 10 ? '0'+timer : timer);

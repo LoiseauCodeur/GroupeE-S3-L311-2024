@@ -4,12 +4,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     init();
 
     function init(){
-       document.querySelector('.button').addEventListener('clic', (event) => 
-            is_run = !is_run
-            ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? dcument.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class')+' pause')
-        );
+        //fonction qui permet de mettre en pause
+       document.querySelector('.button').addEventListener('click', (event) => {
+            is_run = !is_run; 
+            ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class')+' pause')
+        });
 
-        setTimeInterval(function(){
+        //Fonction qui met a jour la date et la couleur
+        setInterval(function(){
             if(is_run){
                 let oDate = new Date();
                 document.querySelector('#hours').innerHTML   =  adjustTimer(oDate.getHours());
@@ -22,11 +24,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }, 1000);
     };
 
+    //Fonction qui met l'heure au bon format 
     function adjustTimer(timer){
-        (timer < 10 ? '0'+timer : timer);
+        return (timer < 10 ? '0'+timer : timer);
     }
-
-    function randomHexColor(x, y){
+    //Fonction qui génére les couleurs selon l'heure
+    function randomHexColor(x, y, z){
         return "rgb(" + Math.floor(x/100 * 256) + "," + Math.floor(y/100 * 256) + "," + Math.floor(z/100 * 256) + ")";
     }
 });

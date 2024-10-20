@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <title>Timetitle</title>
         <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet"> 
-        <link rel="stylesheet" href="assets/css/style.css">
-        <script src="assets/js/script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
     </head>
     <body>
-        <div id="wrapper">
+        <main id="wrapper">
             <div class="inside" id="wrapper">
                 <div class="timer">
                 <span id="hours">00</span>
@@ -19,6 +19,6 @@
                     <button class="button pause"></button>
                 </div>
             </div>
-        </div>
+        </main>
     </body>
 </html>
